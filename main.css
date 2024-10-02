@@ -20,6 +20,7 @@ form {
     background-color: #c8d6e5;
     padding: 24px;
     text-align: center;
+    display: none; /* Form. ñ aparece a princípio pois é acionado pelo JS e JQ */
 }
 form h2 {
     margin-bottom: 16px;
@@ -27,6 +28,7 @@ form h2 {
 input, button {
     padding: 8px;
 }
+
 button {
     background-color: #009432;
     border: none;
@@ -46,3 +48,45 @@ button {
     margin-left: 10px;
 }
 
+ul {
+    display: flex; /*para que os elementos fiquem alinhados lateralmente*/
+    flex-wrap: wrap;/*quando chega ao limite de tela crie uma nova linha*/
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    max-width: 25%;    
+    list-style: none; 
+    position: relative; /*coloca a legenda da foto dentro da foto*/
+    max-height: 280px;
+    display: flex; /*articula o conteúdo proporcionalmente*/
+    overflow-y: hidden; /*elimina a linha inferior da imagem*/
+}
+
+ul li img {
+    width: 100%; /*para que as imagens ocupem todo o espaço e ñ se amontoem*/
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.overlay-image-link { /*estilo das imagens dispostas*/
+    padding: 16px; /*as fotos terão margem de 16 px*/
+    background-color: rgba(0, 0, 1, 0.514); /*adiciona a cor com transparência pelo rgba*/
+    position: absolute; /*ñ permite que o elemento vaze do espaço destinado*/ 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s; /*adiciona transição no link da imagem*/
+}
+
+.overlay-image-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover /*evento quando clica ele reaparece*/ .overlay-image-link {
+    opacity: 1;
+}

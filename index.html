@@ -11,19 +11,45 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 
-<body>
+<body> <!--abertura galeria de fotos e botão para inserir imagem-->
     <header>
         <h1>Galeria de Fotos <span class="camera-emoji">📸</span></h1>
         <button type="button">Nova imagem +</button>
-    </header>
+    </header> <!--área de insersão de imagem-->
         <form>
         <h2>Inserir nova imagem</h2>
-        <input type="url" required placeholder="URL da imagem">
+        <input type="url" id="endereço-imagem-nova" required placeholder="URL da imagem">
         <button type="submit">Adicionar</button>
         <button type="reset" id="botao-cancelar">Cancelar</button>
-    </form>
+    </form> <!--abaixo segue para lista de imagens do form.-->
+    <ul>
+        <li>
+            <img src="./img/foto1.jpg" alt="pintura de um gato" />
+            <div class="overlay-image-link">
+                <a href="./img/foto1.jpg" title="Ver imagem em tamanho real" target="_blank">
+                    Ver imagem em tamanho real 
+                </a>
+            </div>
+        </li>
+        <li>
+            <img src="./img/foto2.jpg" alt="pintura de um gato" />
+            <div class="overlay-image-link">
+                <a href="./img/foto2.jpg" title="Ver imagem em tamanho real" target="_blank">
+                    Ver imagem em tamanho real 
+                </a>
+            </div>
+        </li>
+        <li>
+            <img src="./img/foto3.jpg" alt="pintura de um gato" />
+            <div class="overlay-image-link"> <!--estiliza o link das imagens-->
+                <a href="./img/foto3.jpg" title="Ver imagem em tamanho real" target="_blank">
+                    Ver imagem em tamanho real 
+                </a>
+            </div>
+        </li>
+
+    </ul>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./main.js"></script>
 </body>
-
 </html>
